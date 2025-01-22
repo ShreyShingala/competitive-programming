@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions - Shrey's Competitive Programming Solutions</title>
+    <link rel="stylesheet" href="solutions.css">
+</head>
+<body>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <button class="go-back" onclick="location.href='index.html'">Go Back</button>
+    <h1 class="title">Solutions</h1>
+    <div class="button-container">
+        <button onclick="document.getElementById('leetcode-section').scrollIntoView()">LeetCode</button>
+        <button onclick="document.getElementById('ccc-section').scrollIntoView()">CCC</button>
+        <button onclick="document.getElementById('cses-section').scrollIntoView()">CSES</button>
+    </div>
+    <div class="spinning-text spinning-text-1">All my homies love leetcode</div>
+    <div class="spinning-text spinning-text-2">Waterloo CCC 🙏🙏</div>
+    <div class="spinning-text spinning-text-3">Please let me solve a hard problem</div>
+    <div class="spinning-text spinning-text-4">Graph Theory!!!!</div>
+    <div class="spinning-text spinning-text-5">Recusrion (Recursion)</div>
+    <div class="spinning-text spinning-text-6">Sorting Algorithms</div>
+    <div class="spinning-text spinning-text-7">spaghetti code 😔</div>
+    <div class="spinning-text spinning-text-8">I love fast code</div>
+    <div class="spacer"></div>
+    <div class="solutions-container" id="solutions-container">
+        <div id="leetcode-section" class="category-container">
+            <h2>LEETCODE</h2>
+        </div>
+        <div id="ccc-section" class="category-container">
+            <h2>CCC</h2>
+        </div>
+        <div id="cses-section" class="category-container">
+            <h2>CSES</h2>
+        </div>
+    </div>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
+        }
+
+        if (localStorage.getItem('dark-mode') === 'true' || 
+            (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark-mode');
+        }
+
+        const problems = {
+            leetcode: [
+                {
+                    name: "Path Sum",
+                    link: "https://leetcode.com/problems/path-sum/description/",
+                    solution: "files/leetcode/112.cpp"
+                },
+                {
+                    name: "Find the Town Judge",
+                    link: "https://leetcode.com/problems/find-the-town-judge",
+                    solution: "files/leetcode/997.cpp"
+                },
+                {
+                    name: "Find Center of Star Graph",
+                    link: "https://leetcode.com/problems/find-center-of-star-graph/",
+                    solution: "files/leetcode/1791.cpp"
+                },
+                {
+                    name: "Find if Path Exists in Graph",
+                    link: "https://leetcode.com/problems/find-if-path-exists-in-graph/",
+                    solution: "files/leetcode/1971.cpp"
+                }
+            ],
+            ccc: [
+                {
+                    name: "2011 S1 English or French?",
+                    link: "https://dmoj.ca/problem/ccc11s1",
+                    solution: "files/CCC/2011/S1.cpp"
+                },{
+                    name: "2011 S2 Multiple Choice",
+                    link: "https://dmoj.ca/problem/ccc11s2",
+                    solution: "files/CCC/2011/S2.cpp"
+                },{
+                    name: "2011 S1 Don't pass me the ball!",
+                    link: "https://dmoj.ca/problem/ccc12s1",
+                    solution: "files/CCC/2012/S1.cpp"
+                },{
+                    name: "2012 S2 Aromatic Numbers",
+                    link: "https://dmoj.ca/problem/ccc12s1",
+                    solution: "files/CCC/2012/S1.cpp"
+                },{
+                    name: "2013 S1 From 1987 to 2013",
+                    link: "https://dmoj.ca/problem/ccc13s1",
+                    solution: "files/CCC/2013/S1.cpp"
+                },{
+                    name: "2013 S2 Bridge Transport?",
+                    link: "https://dmoj.ca/problem/ccc13s2",
+                    solution: "files/CCC/2013/S2.cpp"
+                },{
+                    name: "2013 S4 Who is Taller",
+                    link: "https://dmoj.ca/problem/ccc13s4",
+                    solution: "files/CCC/2011/S4.cpp"
+                },{
+                    name: "2014 S1 Party Invitation",
+                    link: "https://dmoj.ca/problem/ccc14s1",
+                    solution: "files/CCC/2014/S1.cpp"
+                },{
+                    name: "2014 S2 Assigning Partners",
+                    link: "https://dmoj.ca/problem/ccc14s2",
+                    solution: "files/CCC/2014/S2.cpp"
+                },{
+                    name: "2014 S3 The Geneva Confection",
+                    link: "https://dmoj.ca/problem/ccc14s3",
+                    solution: "files/CCC/2014/S3.cpp"
+                },{
+                    name: "2016 S1 Ragaman",
+                    link: "https://dmoj.ca/problem/ccc16s1",
+                    solution: "files/CCC/2016/S1.cpp"
+                }
+               
+            ],
+            cses: [
+                {
+                    name: "Weird Algorithm",
+                    link: "https://cses.fi/problemset/task/1068",
+                    solution: "files/CSES/WeirdAlgorithm.cpp"
+                },
+                {
+                    name: "Missing Number",
+                    link: "https://cses.fi/problemset/task/1083",
+                    solution: "files/CSES/MissingNumber.cpp"
+                },
+                {
+                    name: "Repetitions",
+                    link: "https://cses.fi/problemset/task/1069",
+                    solution: "files/CSES/Repetitions.cpp"
+                },
+                {
+                    name: "Increasing Array",
+                    link: "https://cses.fi/problemset/task/1094",
+                    solution: "files/CSES/IncreasingArray.cpp"
+                },
+                {
+                    name: "Number Spiral",
+                    link: "https://cses.fi/problemset/task/1071",
+                    solution: "files/CSES/NumberSpiral.cpp"
+                },
+                {
+                    name: "Permutations",
+                    link: "https://cses.fi/problemset/task/1070",
+                    solution: "files/CSES/Permutations.cpp"
+                },
+                {
+                    name: "Two Knights",
+                    link: "https://cses.fi/problemset/task/1072",
+                    solution: "files/CSES/TwoKnights.cpp"
+                }
+            ]
+        };
+
+        function generateProblems() {
+            for (const category in problems) {
+                const categoryDiv = document.getElementById(`${category}-section`);
+                problems[category].forEach(problem => {
+                    const problemDiv = document.createElement('div');
+                    problemDiv.className = 'problem-container';
+                    problemDiv.innerHTML = `
+                        <h3>Problem Name: ${problem.name}</h3>
+                        <p>Link: <a href="${problem.link}">${problem.link}</a></p>
+                        <p>Solution: <a href="${problem.solution}">Download Solution</a></p>
+                    `;
+                    categoryDiv.appendChild(problemDiv);
+                });
+            }
+        }
+
+        window.onload = generateProblems;
+    </script>
+</body>
+</html>

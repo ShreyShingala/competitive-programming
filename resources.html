@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Shrey's Competitive Programming Solutions</title>
+    <link rel="stylesheet" href="resources.css">
+</head>
+<body>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <button class="go-back" onclick="location.href='index.html'">Go Back</button>
+    <h1 class="title">Resources</h1>
+    <div class="book-container">
+        <div class="book">
+            <h2>Guide to Competitive Programming</h2>
+            <p>Super cool book by Antti Laaksonen. Lots of helpful advide for anyone wanting to learning more about competitive programming. Features lots of different algorithms. Book is in c++.</p>
+            <button onclick="location.href='files/Resources/book1.pdf'">Download</button>
+        </div>
+        <div class="book">
+            <h2>Competitive Programmer’s Handbook</h2>
+            <p>This book is also by Antii Laaksonen. Overall is pretty similar to the first book, but two is better then one.</p>
+            <button onclick="location.href='book2.html'">Download</button>
+        </div>
+        <div class="book">
+            <h2>Cracking the Coding Interview</h2>
+            <p>The gold standard for competetive programming and interview prep. This book features 189 programming problems and solutions, that will help you ace your next interview.</p>
+            <button onclick="location.href='files/Resources/cracking_interview.pdf'">Download</button>
+        </div>
+    </div>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
+        }
+
+        if (localStorage.getItem('dark-mode') === 'true' || 
+            (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+</body>
+</html>
